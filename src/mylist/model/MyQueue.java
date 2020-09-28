@@ -9,9 +9,12 @@ package mylist.model;
  *
  * @author Netbeans
  */
-public class MyQueue extends MyList{
+public class MyQueue<T> extends MyList<T>{
 
     public MyQueue() {
+        super();
     }
-    
+    public void push(T info){
+        super.addToEnd(info);
+    }
 }

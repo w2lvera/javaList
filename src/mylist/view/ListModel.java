@@ -30,5 +30,7 @@ public class ListModel extends AbstractListModel<String>{
     }
     // Оповещение видов о добавлении, если они есть
      //           fireIntervalAdded(this, 0, data.size());
-    
+    public void fireIntervalAdded(){
+        fireIntervalAdded(this, 0, list.getSize());
+    }
 }

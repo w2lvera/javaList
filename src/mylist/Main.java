@@ -19,12 +19,12 @@ public class Main {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        MyList<String> list = new MyList<>();
-        list.addToBegin("one");
-        list.addToBegin("two");
-        list.addToEnd("-one");
-        list.addToEnd("-two");
-        System.out.println(list);
+//        MyList<String> list = new MyList<>();
+//        list.addToBegin("one");
+//        list.addToBegin("two");
+//        list.addToEnd("-one");
+//        list.addToEnd("-two");
+//        System.out.println(list);
         MyPanel panel = new MyPanel();
         MyFrame frame = new MyFrame(panel);
     }

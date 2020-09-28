@@ -9,9 +9,13 @@ package mylist.model;
  *
  * @author Netbeans
  */
-public class MyStack extends MyList{
+public class MyStack<T> extends MyList<T>{
 
     public MyStack() {
+        super();
+    }
+    public void push(T info){
+        super.addToBegin(info);
     }
     
 }

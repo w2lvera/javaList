@@ -10,6 +10,7 @@ import java.awt.event.ActionListener;
 import javax.swing.JButton;
 import javax.swing.JList;
 import javax.swing.JPanel;
+import javax.swing.JScrollPane;
 import javax.swing.JTextField;
 import mylist.model.MyList;
 import mylist.model.MyQueue;
@@ -19,7 +20,7 @@ import mylist.model.MyStack;
  *
  * @author Netbeans
  */
-class MyPanel extends JPanel{
+public class MyPanel extends JPanel{
     
     MyList list;
     
@@ -39,8 +40,7 @@ class MyPanel extends JPanel{
             @Override
             public void actionPerformed(ActionEvent e) {
                 list.push(field.getText().trim());
-                
-               // fireIntervalAdded(listModel, 0, list.getSize());
+                listModel.fireIntervalAdded();
             }
         });
         button1 = new JButton("stack model");
@@ -49,12 +49,16 @@ class MyPanel extends JPanel{
             @Override
             public void actionPerformed(ActionEvent e) {
                 list=new MyStack();
+                listModel.setList(list);
+                listModel.fireIntervalAdded();
             }
         });
         button2.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 list=new MyQueue();
+                listModel.setList(list);
+                listModel.fireIntervalAdded();
             }
         });
         jList = new JList();
@@ -64,7 +68,7 @@ class MyPanel extends JPanel{
         add(button);
         add(button1);
         add(button2);
-        add(jList);
+        add(new JScrollPane(jList));
         
     }
 
