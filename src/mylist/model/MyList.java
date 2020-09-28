@@ -83,7 +83,7 @@ public class MyList<T> {
         for(; i.next!=null &&j<ind; j++, i=i.next );
         return i.info;
     }
-
+    public void push(T info){}
     @Override
     public String toString() {
         String str = "";

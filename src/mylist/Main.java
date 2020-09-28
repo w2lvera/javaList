@@ -6,6 +6,8 @@
 package mylist;
 
 import mylist.model.MyList;
+import mylist.view.MyFrame;
+import mylist.view.MyPanel;
 
 /**
  *
@@ -23,6 +25,8 @@ public class Main {
         list.addToEnd("-one");
         list.addToEnd("-two");
         System.out.println(list);
+        MyPanel panel = new MyPanel();
+        MyFrame frame = new MyFrame(panel);
     }
     
 }
