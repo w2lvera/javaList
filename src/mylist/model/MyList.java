@@ -73,9 +73,13 @@ public class MyList<T> {
         }
     }
     public T pop(){
-        Node<T> current = head;
-        head = head.next;
-        return current.info;
+        if(head!=null){
+            Node<T> current = head;
+            head = head.next;
+            return current.info;
+        }
+        
+        return null;
     }
     public T getIndex(int ind){
         int j=0;

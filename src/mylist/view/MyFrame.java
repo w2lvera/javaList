@@ -19,7 +19,8 @@ public class MyFrame extends JFrame{
     public MyFrame(MyPanel panel) {
         this.panel = panel;
         add(panel);
-        setSize(500, 500);
+       // setSize(500, 500);
+        pack();
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setVisible(true);
     }
